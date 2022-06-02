@@ -3,6 +3,7 @@ package br.com.entra21.java.avancado.principal;
 import java.util.Scanner;
 
 import br.com.entra21.java.avancado.principal.aula01.enums.PersonagemJogo;
+import br.com.entra21.java.avancado.principal.aula02.collections.list.AprenderCollections;
 
 public class Main {
 	static Scanner entrada = new Scanner(System.in);
@@ -34,6 +35,10 @@ public class Main {
 				aprenderEnum();
 				break;
 
+			case 3:
+				AprenderCollections.aprender();
+				break;
+
 			default:
 				System.out.println("Por favor digite uma opção válida!");
 				break;
@@ -46,10 +51,11 @@ public class Main {
 	public static String exibirMenu() {
 
 		String menu = "\nVamos aprender sobre conceitos avançados sobre JAVA!";
-		menu += "\n\nEscolha uma das opções abaixo";
-		menu += "\n0 -  Sair";
+		menu += "\n\nEscolha uma das opções abaixo:";
+		menu += "\n0 - Sair";
 		menu += "\n1 - Wrapper";
 		menu += "\n2 - ENUM";
+		menu += "\n3 - Collections List";
 		return menu;
 
 	}
@@ -99,13 +105,11 @@ public class Main {
 			System.out.println("---------------------------------------------------");
 
 		}
-		
-		for(PersonagemJogo variavel:PersonagemJogo.values()) {
-			System.out.println(variavel.ordinal()+ " - "+variavel.getDetails());
-			System.out.println("O Druida esta na posição: "+PersonagemJogo.DRUIDA.ordinal());
+
+		for (PersonagemJogo variavel : PersonagemJogo.values()) {
+			System.out.println(variavel.ordinal() + " - " + variavel.getDetails());
+			System.out.println("O Druida esta na posição: " + PersonagemJogo.DRUIDA.ordinal());
 		}
 	}
-	
-	
 
 }
